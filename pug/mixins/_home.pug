@@ -1,0 +1,24 @@
+mixin home(home__img,home__name,home__location,home__rooms,home__area,home__price)
+    .home
+        img.home__img(src= home__img, alt="House")
+        svg.home__like
+            use(xlink:href="../../img/sprite.svg#icon-heart-full")
+        h5.home__name= home__name
+        .home__location
+            svg
+                use(xlink:href="../../img/sprite.svg#icon-map-pin")
+            p= home__location
+        .home__rooms
+            svg
+                use(xlink:href="../../img/sprite.svg#icon-profile-male")
+            p= home__rooms
+        .home__area
+            svg
+                use(xlink:href="../../img/sprite.svg#icon-expand")
+            p= home__area
+                sup 2
+        .home__price
+            svg
+                use(xlink:href="../../img/sprite.svg#icon-key")
+            p= home__price
+        button.btn.home__btn Contact realtor

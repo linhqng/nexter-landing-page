@@ -1,0 +1,6 @@
+mixin feature(feature__icon, heading, feature__text)
+    .feature
+        svg.feature__icon
+            use(xlink:href=feature__icon)
+        h4.heading-4.heading-4--dark-1= heading
+        p.feature__text= feature__text
