@@ -1,6 +1,8 @@
 include mixins/_feature.pug
 include mixins/_home.pug
 include mixins/_gallery__item.pug
+include mixins/_nav__item.pug
+include mixins/_realtors__item.pug
 doctype html
 html(lang="en")
     head
@@ -30,18 +32,9 @@ html(lang="en")
         .realtors
             h3.heading-3 Top 3 Realtors
             .realtors__list
-                img.realtors__img(src="img/realtor-1.jpeg", alt="Realtor")
-                .realtors__details
-                    h4.heading-4.heading-4--light Erik Feinman
-                    p.realtors__sold 245 houses sold
-                img.realtors__img(src="img/realtor-2.jpeg", alt="Realtor")
-                .realtors__details
-                    h4.heading-4.heading-4--light Kim Brown
-                    p.realtors__sold 212 houses sold
-                img.realtors__img(src="img/realtor-3.jpeg", alt="Realtor")
-                .realtors__details
-                    h4.heading-4.heading-4--light Toby Ramsey
-                    p.realtors__sold 198 houses sold
+                +realtors__item("img/realtor-1.jpeg","Erik Feinman","245 houses sold")
+                +realtors__item("img/realtor-2.jpeg","Kim Brown","212 houses sold")
+                +realtors__item("img/realtor-3.jpeg","Toby Ramsey","198 houses sold")
         section.features
             +feature("img/sprite.svg#icon-global","World's best luxury homes","Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur distinctio necessitatibus pariatur voluptatibus.")
             +feature("img/sprite.svg#icon-trophy","Only the best properties","Voluptatum mollitia quae. Vero ipsum sapiente molestias accusamus rerum sed a eligendi aut quia.")
@@ -72,16 +65,10 @@ html(lang="en")
             
         footer.footer
             ul.nav
-                li.nav__item
-                    a.nav__link(href="#") Find your dream home
-                li.nav__item
-                    a.nav__link(href="#") Request proposal
-                li.nav__item
-                    a.nav__link(href="#") Download home planner
-                li.nav__item
-                    a.nav__link(href="#") Contact us
-                li.nav__item
-                    a.nav__link(href="#") Submit your property
-                li.nav__item
-                    a.nav__link(href="#") Come work with us!
+                +nav__item("Find your dream home")
+                +nav__item("Request proposal")
+                +nav__item("Download home planner")
+                +nav__item("Contact us")
+                +nav__item("Submit your property")
+                +nav__item("Come work with us!")
             p.copyright &copy; Copyright 2020 by Linh Nguyen. Feel free to use this project for your own purposes.
